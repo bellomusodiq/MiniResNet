@@ -5,6 +5,8 @@ from .model import ResNet
 CUDA = torch.cuda.is_available()
 
 model = ResNext()
+if CUDA:
+    model = model.cuda()
 
 # hyper parameters
 learning_rate = 0.01
